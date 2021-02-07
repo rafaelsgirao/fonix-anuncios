@@ -1,0 +1,20 @@
+{
+    "LEIC-A": ["AL","CDI-I","CDI-II","IAED","LP","MD"],
+    "LEIC-T": ["AL","CDI-I","CDI-II","IAED","LP","MD"],
+    "LEE": ["AL","CDI-I","CDI-II","AC","DMG","MO","Prog"],
+    "LEGM": ["AL","CDI-I","CDI-II","Des","Est","EOEG","Geol","MO"],
+    "LEGI": ["AL", "CDI-I", "CDI-II", "CM", "DMG", "MO", "Micr"],
+    "LENO": ["AL", "CDI-I", "CDI-II", "CM", "DCN", "Ges", "MO"],
+    "LETI": ["AL", "CDI-I", "CDI-II", "IETI", "IAED", "MO"],
+    "LMAC": ["AL", "CDI-I", "CDI-II", "CCDI", "IA", "IO", "MO"],
+    "MA": ["DA-II", "Est", "HACM", "MAT-II"],
+    "MEAer": ["AL", "CDI-I", "CDI-II", "CM", "Ges", "MO", "SD"],
+    "MEAmbi": ["AL", "BBM", "CDI-I", "CDI-II", "GAmbi", "MO", "QO"],
+    "MEBiol": ["AL", "BBM", "CDI-I"],
+    "MEBiom": ["AL", "BE", "CDI-I", "CDI-II", "MO", "Qui", "TCFE"],
+    "MEEC": ["AL", "AC", "CDI-I", "CDI-II", "Ges", "MO", "Prog"],
+    "MEFT": ["AL", "CDI-I", "CDI-II", "LO", "OO", "Qui", "SD"],
+    "MEM": ["AL", "CDI-I", "CDI-II", "IEM", "LEM", "MO", "QO"],
+    "MEMec": ["AL", "CDI-I", "CDI-II", "CM", "DGM-II", "Ges", "MO", "PP"],
+    "MEQ": ["AL", "BBM", "CDI-I", "CDI-II", "LQ-II", "MO", "Qui-II", "QuiO-I"]
+}
