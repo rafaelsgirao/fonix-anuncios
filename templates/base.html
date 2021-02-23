@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Title{% endblock %}</title>
 </head>
+
 <body>
+
     {% if message %}
-        <p>Note: {{ message }}</p>
+    <p>{{ message }}</p>
     {% endif %}
     {% block content %}
     {% endblock %}
+    <hr>
+    <p>Source: <a
+        href="https://github.com/rafaelsgirao/fonix-anuncios">https://github.com/rafaelsgirao/fonix-anuncios</a></p>
+<p>Contact: <a href="mailto:rafael@rafael.ovh">rafael@rafael.ovh</a> | Discord: <a
+        href="https://discord.com/users/97747424486887424">Ender#1327</a></p>
 </body>
+
 </html>
