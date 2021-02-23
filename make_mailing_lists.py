@@ -17,9 +17,16 @@ def create_mailing_list(course, uc):
               'reply_preference': 'sender'
         }).text
 
+template = """<p><input type=checkbox name={course} value='{uc}'> {uc_high} <br/></p>"""
 
 for course in data:
-    for uc in data[course]:
-        print(f"{uc} - {course} | Fónix Anúncios")
-        print(create_mailing_list(course, uc))
+    print("        <h2>{}</h2>".format(course))
+    print('        <button onclick="return false;" class="collapsible">Abrir </button>')
+    print('        <div class="content">')
 
+    for uc in data[course]:
+        if data[course][uc] != "":
+            #print(f"{uc} - {course} | Fónix Anúncios")
+            #print(create_mailing_list(course, uc))
+            print(template.format(course=course.lower(), course_high=course, uc=uc.lower(), uc_high=uc))
+    print('        </div>')
