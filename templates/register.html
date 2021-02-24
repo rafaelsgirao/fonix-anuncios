@@ -3,44 +3,7 @@
 {% block title %}Fónix Anúncios{% endblock %}
 
 {% block content %}
-<style>
-    .collapsible {
-        background-color: #777;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-    }
-
-    .active,
-    .collapsible:hover {
-        background-color: #555;
-    }
-
-    .collapsible:after {
-        content: '\002B';
-        color: white;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-    }
-
-    .active:after {
-        content: "\2212";
-    }
-
-    .content {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        background-color: #f1f1f1;
-    }
-</style>
+<link rel="stylesheet" href="static/styles.css">
 {% if text %}
 <p>{{ text }}</p>
 {% endif %}
@@ -55,7 +18,7 @@
 
     <!--Place output of make_template(data) here-->
     <h2>LEIC-A</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=LEIC-A value='AL'> AL <br /></p>
         <p><input type=checkbox name=LEIC-A value='CDI-I'> CDI-I <br /></p>
@@ -65,7 +28,7 @@
         <p><input type=checkbox name=LEIC-A value='MD'> MD <br /></p>
     </div>
     <h2>LEIC-T</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=LEIC-T value='AL'> AL <br /></p>
         <p><input type=checkbox name=LEIC-T value='CDI-I'> CDI-I <br /></p>
@@ -75,7 +38,7 @@
         <p><input type=checkbox name=LEIC-T value='MD'> MD <br /></p>
     </div>
     <h2>LEE</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=LEE value='AL'> AL <br /></p>
         <p><input type=checkbox name=LEE value='CDI-I'> CDI-I <br /></p>
@@ -86,7 +49,7 @@
         <p><input type=checkbox name=LEE value='Prog'> Prog <br /></p>
     </div>
     <h2>LEGM</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=LEGM value='AL'> AL <br /></p>
         <p><input type=checkbox name=LEGM value='CDI-I'> CDI-I <br /></p>
@@ -98,14 +61,14 @@
         <p><input type=checkbox name=LEGM value='MO'> MO <br /></p>
     </div>
     <h2>LEGI</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=LEGI value='AL'> AL <br /></p>
         <p><input type=checkbox name=LEGI value='CDI-I'> CDI-I <br /></p>
         <p><input type=checkbox name=LEGI value='CDI-II'> CDI-II <br /></p>
     </div>
     <h2>MEEC</h2>
-    <button onclick="return false;" class="collapsible">Abrir </button>
+    <button type="button" class="collapsible">Abrir </button type="button">
     <div class="content">
         <p><input type=checkbox name=MEEC value='AL'> AL <br /></p>
         <p><input type=checkbox name=MEEC value='AC'> AC <br /></p>
@@ -117,20 +80,5 @@
     </div>
     <!--End of output of function-->
 </form>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-</script>
+<script type="text/javascript" src="static/main.js"></script>  
 {% endblock %}
