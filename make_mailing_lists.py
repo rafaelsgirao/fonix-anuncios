@@ -44,3 +44,10 @@ for course in data:
         if data[course][uc] != "":
             print(f"{uc} - {course} | Fónix Anúncios")
             #print(create_mailing_list(course, uc))
+
+def gen_r2e_cmds(data):
+    for course in data:
+        for uc in data[course]:
+            if data[course][uc] != "":
+                address = f'{course.lower()}-{uc.lower()}-anuncios@mg.rafael.ovh'
+                print(f"./r2e add {course}-{uc}-Anuncios {data[course][uc]} {address}")
