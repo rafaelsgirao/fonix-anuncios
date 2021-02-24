@@ -29,7 +29,8 @@ def make_template(data):
 
     for course in data:
         print("        <h2>{}</h2>".format(course))
-        print('        <button onclick="return false;" class="collapsible">Abrir </button>')
+        #a button with a type named 'button' seems stupid but welp, it works
+        print('        <button type="button" class="collapsible">Abrir </button>')
         print('        <div class="content">')
 
         for uc in data[course]:

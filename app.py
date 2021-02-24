@@ -22,6 +22,15 @@ f.close()
 # Todo: Regen and load this from .env file
 app.config['SECRET_KEY']=getenv('FLASK_SECRET_KEY')
 
+@app.after_request
+def add_security_headers(resp):
+    resp.headers['Content-Security-Policy'] = "default-src 'self'"
+    resp.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    resp.headers['X-Content-Type-Options'] = 'nosniff'
+    resp.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    resp.headers['X-XSS-Protection'] = '1; mode=block'
+    return resp
+
 def send_confirmation_email(email, link):
     return post(
         f"https://api.eu.mailgun.net/v3/{getenv('MAILGUN_DOMAIN')}/messages",
@@ -79,7 +88,7 @@ def confirm(token):
         if cfg[email]["token"] == token:
             token_found=True
 
-            add_list_member(email, cfg[email]["subscriptions"])
+            print(add_list_member(email, cfg[email]["subscriptions"]))
             cfg.pop(email)
             dump_cfg()
             header="Obrigado por confirmares!"
