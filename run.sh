@@ -1,1 +1,1 @@
-uwsgi --http 127.0.0.1:5000 --module app:app --enable-threads
+uwsgi --http 127.0.0.1:20821 --module app:app --enable-threads
