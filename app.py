@@ -14,7 +14,7 @@ app = Flask(__name__)
 import sys
 EMAIL_EXPR = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 
-f = open("courses_by_degree.json", "r", encoding="utf-8")
+f = open("link_map.json", "r", encoding="utf-8")
 #Load Courses By Degree
 cbd = json.load(f)
 f.close()
@@ -68,7 +68,7 @@ def dump_cfg():
         f.truncate()
         json.dump(cfg, f, indent=4, ensure_ascii=False)
 
-    print("Dumped to file 'dirs.json'")
+    print("Dumped to file 'conf.json'")
 
 @ app.route('/')
 def index():
